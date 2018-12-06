@@ -1,0 +1,38 @@
+.cam-feed {
+    padding: 20px;
+}
+
+.logo-blocker {
+    background-color: "black";
+    color: "white";
+    height: "42px";
+    width: "560px";
+    margin-top: "293px";
+    position: "absolute";
+}
+
+.report-data {
+    text-align: center;
+}
+
+.report-list {
+    list-style: none;
+}
+
+.title-blocker {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: "black";
+    color: "white";
+    height: "56px";
+    width: "560px";
+    margin-top: "20px";
+    position: "absolute";
+}
+
+.video-parent-container {
+    display: flex;
+    justify-content: center;
+}
+

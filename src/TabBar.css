@@ -1,0 +1,31 @@
+.tab-bar {
+    display: flex;
+    justify-content: center;
+}
+
+.tab-link {
+    background-color: #555;
+    border-radius: 10px;
+    color: white;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    margin: 5px;
+    padding: 14px 16px;
+    font-size: 17px;
+    width: 25%;
+}
+
+/* Change background color of buttons on hover */
+.tab-link:hover {
+    background-color: #777;
+}
+
+/* Set default styles for tab content */
+.tab-content {
+    color: white;
+    display: none;
+    padding: 50px;
+    text-align: center;
+}
+
