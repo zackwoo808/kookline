@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import './Report.css';
+import spotToVideoMap from './spotToVideoMap.js';
 
 const Report = ({ reportData, spotId }) => (
-    // <ul className="report-list">
-    //     {reportData.map(report =>
     <div className="report-data">
         <div className="video-parent-container">
             <div
@@ -18,7 +17,8 @@ const Report = ({ reportData, spotId }) => (
                     position: "absolute"
                 }}
             >
-                {reportData[spotId].spotName} Surf Cam
+                {/* {reportData[spotId].spotName} Surf Cam */}
+                {reportData.spotName} Surf Cam
             </div>
             <div
                 className="logo-blocker"
@@ -36,25 +36,31 @@ const Report = ({ reportData, spotId }) => (
                 className="cam-feed"
                 width="560"
                 height="315"
-                src={reportData[spotId].videoSource}
+                // src={reportData[spotId].videoSource}
+                src = {
+                    `https://www.youtube.com/embed/${spotToVideoMap[reportData.spotName]}?autoplay=1&modestbranding=1&loop=1&rel=0&disablekb=1&controls=0`
+                }
                 frameBorder="0"
                 allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
                 title="cam-feed"
             >
             </iframe>
         </div>
-        <p>Spot: {reportData[spotId].spotName}</p>
+
+        {/* magicseaweed terms&conditions required logo */}
+        {/* < a href = "http://magicseaweed.com" > < img src = "https://im-1-uk.msw.ms/msw_powered_by.png" alt=""/ > </a> */}
+        
+        {/* <p>Spot: {reportData[spotId].spotName}</p> */}
+        <p>Spot: {reportData.spotName}</p>
         <p>
-            <span>Swell: {reportData[spotId].swell.minBreakingHeight} - {reportData[spotId].swell.maxBreakingHeight}</span>
-            <span> {reportData[spotId].swell.unit}</span>
+            <span>{reportData.surfRange}</span>
+            {/* <span> {reportData[spotId].swell.unit}</span> */}
         </p>
     </div>
-    //     )}
-    // </ul>
 )
 
 Report.propTypes = {
-    reportData: PropTypes.array.isRequired
+    reportData: PropTypes.object.isRequired
 }
 
 export default Report;

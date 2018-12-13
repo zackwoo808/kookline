@@ -4,25 +4,25 @@ import './TabBar.css';
 
 const TabBar = ({ reportData, handleClick }) => (
     <div className="tab-bar">
-        {reportData.map(spot => 
+        {Object.keys(reportData).map(spot => (
             <button
                 key={spot.id}
                 className="tab-link"
-                onClick={() => handleClick(spot.index)}
+                onClick={() => handleClick(spot)}
                 id={
-                    spot.spotName === "El Porto" ?
+                    spot === "El Porto" ?
                     "defaultOpen" :
-                    spot.spotName
+                    spot
                 }
             >
-                {spot.spotName}
+                {spot}
             </button>
-        )}
+        ))}
     </div>
 );
 
 TabBar.propTypes = {
-    reportData: PropTypes.array.isRequired
+    reportData: PropTypes.object.isRequired
 }
 
 export default TabBar;
