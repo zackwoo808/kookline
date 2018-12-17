@@ -21,7 +21,8 @@ class App extends Component {
   }
 
   componentDidMount() {
-    axios.get(`https://api.surfline.com/v1/forecasts/${spotToIdMap["Pipeline"]}`).then(res => {
+    // axios.get(`https://api.surfline.com/v1/forecasts/${spotToIdMap["Pipeline"]}`).then(res => {
+      axios.get(`https://kookline-api.herokuapp.com/${spotToIdMap["El Porto"]}`).then(res => { // bypassing CORS from a frontend app request to API
       //console.log(res.data.Analysis.surfRange[0]);
       this.setState({
         report: {
@@ -35,7 +36,8 @@ class App extends Component {
   }
 
   handleTabChange = (spot) => {
-    axios.get(`https://api.surfline.com/v1/forecasts/${spotToIdMap[spot]}`).then(res => {
+    // axios.get(`https://api.surfline.com/v1/forecasts/${spotToIdMap[spot]}`).then(res => {
+      axios.get(`https://kookline-api.herokuapp.com/${spotToIdMap[spot]}`).then(res => {
       //console.log(res.data.Analysis.surfRange[0]);
       this.setState({
         report: {
