@@ -18,7 +18,7 @@ const Report = ({ reportData, spotId }) => (
                 }}
             >
                 {/* {reportData[spotId].spotName} Surf Cam */}
-                {reportData.spotName} Surf Cam
+                <p className="cam-title">{reportData.spotName} Surf Cam</p>
             </div>
             <div
                 className="logo-blocker"
@@ -51,9 +51,9 @@ const Report = ({ reportData, spotId }) => (
         {/* < a href = "http://magicseaweed.com" > < img src = "https://im-1-uk.msw.ms/msw_powered_by.png" alt=""/ > </a> */}
         
         {/* <p>Spot: {reportData[spotId].spotName}</p> */}
-        <p>Spot: {reportData.spotName}</p>
+        {/* <p>Spot: {reportData.spotName}</p> */}
         <p>
-            <span>{reportData.surfRange}</span>
+            <span className="surf-range">{reportData.surfRange}</span>
             {/* <span> {reportData[spotId].swell.unit}</span> */}
         </p>
     </div>

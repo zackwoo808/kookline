@@ -1,3 +1,7 @@
+/* #default-open {
+    background-color: lightseagreen;
+} */
+
 .tab-bar {
     display: flex;
     justify-content: center;

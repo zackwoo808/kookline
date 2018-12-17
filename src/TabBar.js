@@ -11,7 +11,7 @@ const TabBar = ({ reportData, handleClick }) => (
                 onClick={() => handleClick(spot)}
                 id={
                     spot === "El Porto" ?
-                    "defaultOpen" :
+                    "default-open" :
                     spot
                 }
             >

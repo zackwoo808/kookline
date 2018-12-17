@@ -2,6 +2,12 @@
     padding: 20px;
 }
 
+.cam-title {
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+    padding: 5px;
+}
+
 .logo-blocker {
     background-color: "black";
     color: "white";
@@ -15,8 +21,13 @@
     text-align: center;
 }
 
-.report-list {
-    list-style: none;
+.surf-range {
+    border: 2px solid lightseagreen;
+    padding: 20px;
+    border-radius: 5px;
+    font-size: 20px;
+    font-weight: 800;
+    font-family: "Arial";
 }
 
 .title-blocker {
